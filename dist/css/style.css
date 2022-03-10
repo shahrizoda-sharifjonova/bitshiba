@@ -330,6 +330,63 @@
      object-fit: cover;
 }
 
+.check__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.check__id {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 200%;
+  color: #fff;
+}
+
+.check__desc {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 200%;
+  color: #f9d311;
+  margin-bottom: 70px;
+}
+
+.check__title {
+  color: #fff !important;
+}
+
+.check__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.check__item {
+  background: rgba(249, 211, 17, 0.1);
+  border: 1px solid rgba(255, 127, 0, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -404,6 +461,14 @@ a {
 
 ul {
   list-style: none;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 150%;
+  margin-bottom: 35px;
+  color: #F9D311;
 }
 
 @media (min-width: 576px) {
@@ -511,6 +576,15 @@ ul {
     display: -ms-flexbox !important;
     display: flex !important;
   }
+
+  .check__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media (max-width: 992px) {
@@ -557,6 +631,26 @@ ul {
 
   .intro__icons img {
     width: 40px;
+  }
+
+  .check__id {
+    font-size: 14px;
+    line-height: 200%;
+    margin-bottom: 10px;
+  }
+
+  .check__desc {
+    font-size: 18px;
+    line-height: 200%;
+  }
+}
+
+@media (max-width: 776px) {
+  .title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 25px;
   }
 }
 
