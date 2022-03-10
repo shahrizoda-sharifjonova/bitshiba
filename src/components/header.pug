@@ -1,12 +1,15 @@
 mixin header()
-    header.header.section 
-        nav.header__nav.container 
-            a(href="index.html").logo.disable-lg
-                img(src="@img/logo.png", alt="") 
-            .menu 
+    header.header.section.container 
+        .header__content
+            a(href="index.html").logo.enable-xl
+                img(src="@img/logo.png", alt="")
+            .menu.enable-xl
                 span.menu-btn.menu-btn_1
                 span.menu-btn.menu-btn_2
                 span.menu-btn.menu-btn_3
+        nav.header__nav
+            a(href="index.html").logo.disable-xl
+                img(src="@img/logo.png", alt="")
             ul.header__list 
                 li.header__li
                     a(href="#!").header__link COINMARKETCAP  
@@ -17,9 +20,10 @@ mixin header()
                 li.header__li
                     a(href="#!").header__link ROADMAP  
             .header__buttons 
-                a(href="#!", target="_blank").header__btn LIVE CHART
-                a(href="https://www.telegram.com").header__icon 
-                    img(src="@img/telegram.png", alt="")
-                a(href="https://www.twitter.com").header__icon 
-                    img(src="@img/twitter.png", alt="")
+                a(href="#!").header__btn LIVE CHART
+                .header__icons
+                    a(href="https://www.telegram.com" target="_blank").header__icon 
+                        img(src="@img/telegram.png", alt="")
+                    a(href="https://www.twitter.com" target="_blank").header__icon 
+                        img(src="@img/twitter.png", alt="")
 
