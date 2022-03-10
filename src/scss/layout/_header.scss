@@ -1,0 +1,60 @@
+.header{
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 65px;=
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        color: #FFFFFF;
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        column-gap: 18px;
+    }
+    &__btn{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%; 
+        color: #f9d311;
+        border: 1px solid #f0d311;
+        width: 190px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+    }
+    .menu{
+        width: 40px;
+        height: 19px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        background: none;
+        order: 1;
+        @include media(992){
+            display: flex;
+        }
+        &-btn{
+            background: #fff;
+            width: 30px;
+            height: 3px;
+            &_2{
+                width: 40px;
+            }
+            &_3{
+                width: 21px;
+            }
+        }
+    }
+}

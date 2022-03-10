@@ -1,0 +1,25 @@
+mixin header()
+    header.header.section 
+        nav.header__nav.container 
+            a(href="index.html").logo.disable-lg
+                img(src="@img/logo.png", alt="") 
+            .menu 
+                span.menu-btn.menu-btn_1
+                span.menu-btn.menu-btn_2
+                span.menu-btn.menu-btn_3
+            ul.header__list 
+                li.header__li
+                    a(href="#!").header__link COINMARKETCAP  
+                li.header__li
+                    a(href="#!").header__link DEX TOOLS  
+                li.header__li
+                    a(href="#!").header__link LITEPAPER  
+                li.header__li
+                    a(href="#!").header__link ROADMAP  
+            .header__buttons 
+                a(href="#!", target="_blank").header__btn LIVE CHART
+                a(href="https://www.telegram.com").header__icon 
+                    img(src="@img/telegram.png", alt="")
+                a(href="https://www.twitter.com").header__icon 
+                    img(src="@img/twitter.png", alt="")
+
