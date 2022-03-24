@@ -1,3 +1,115 @@
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-ExtraLight.woff2") format("woff2"), url("../fonts/Oswald-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-ExtraLight.woff2") format("woff2"), url("../fonts/Oswald-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Medium.woff2") format("woff2"), url("../fonts/Oswald-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Medium.woff2") format("woff2"), url("../fonts/Oswald-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-SemiBold.woff2") format("woff2"), url("../fonts/Oswald-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-SemiBold.woff2") format("woff2"), url("../fonts/Oswald-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -369,9 +481,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
@@ -385,6 +494,89 @@
   max-width: 300px;
   width: 100%;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tokenomics__title {
+  text-align: center;
+}
+
+.tokenomics__desc {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 200%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+}
+
+.tokenomics__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.tokenomics__item {
+  background: rgba(249, 211, 17, 0.1);
+  border: 1px solid rgba(255, 127, 0, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  width: 410px;
+  padding: 20px 30px;
+}
+
+.tokenomics__img img {
+  width: 100%;
+}
+
+.tokenomics__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  padding-bottom: 11px;
+}
+
+.tokenomics__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 200%;
+  color: #F9D311;
+}
+
+.tokenomics__p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 200%;
+  color: #FFFFFF;
+}
+
+.tokenomics__span {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 200%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #FF7F00;
 }
 
 * {
@@ -393,7 +585,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  font-family: "Oswald", sans-serif;
+  font-family: Oswald, sans-serif;
 }
 
 *:focus,
@@ -578,12 +770,12 @@ ul {
   }
 
   .check__content {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     row-gap: 10px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -643,6 +835,22 @@ ul {
     font-size: 18px;
     line-height: 200%;
   }
+
+  .tokenomics__desc {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+
+  .tokenomics__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media (max-width: 776px) {
@@ -662,6 +870,19 @@ ul {
   .disable-md {
     display: none !important;
   }
+
+  .check__img {
+    width: 200px;
+  }
+
+  .tokenomics__title {
+    margin-bottom: 20px;
+  }
+
+  .tokenomics__desc {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -671,6 +892,11 @@ ul {
 
   .disable-md2 {
     display: none !important;
+  }
+
+  .check__item {
+    max-width: 240px;
+    width: 100%;
   }
 
   .section {
@@ -686,6 +912,53 @@ ul {
 
   .disable-sm {
     display: none !important;
+  }
+
+  .check__content {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+
+  .check__item {
+    max-width: calc(50% - 10px);
+    width: calc(50% - 10px);
+  }
+
+  .check__img {
+    width: 100%;
+  }
+
+  .tokenomics__desc {
+    font-size: 14px;
+  }
+
+  .tokenomics__item {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .tokenomics__img {
+    width: 30px;
+  }
+
+  .tokenomics__top {
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+    padding-bottom: 10px;
+  }
+
+  .tokenomics__subtitle {
+    font-size: 18px;
+  }
+
+  .tokenomics__p {
+    font-size: 14px;
+  }
+
+  .tokenomics__span {
+    font-size: 14px;
   }
 }
 

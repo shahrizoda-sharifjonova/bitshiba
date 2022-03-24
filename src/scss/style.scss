@@ -1,7 +1,7 @@
 // Главный Sass файл
 
 // Шрифты
-// @import "fonts";
+@import "fonts";
 
 // abstracts
 @import 
@@ -27,7 +27,8 @@
     'layout/sidebar',
     'layout/forms',
     'layout/intro',
-    'layout/check';
+    'layout/check',
+    'layout/tokenomics';
 
 // components
 @import 
