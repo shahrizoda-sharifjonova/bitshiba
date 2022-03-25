@@ -1,0 +1,29 @@
+.map{
+    &__title{
+        text-align: center;
+    }
+    &__desc{
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 200%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 50px;
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 250px;
+        row-gap: 100px;
+    }
+    &__item{
+        width: 300px;
+        height: max-content;
+        padding: 20px 20px 20px 30px;
+        background: rgba(249, 211, 17, 0.1);
+        border: 1px solid rgba(255, 127, 0, 0.2);
+        backdrop-filter: blur(40px);
+    }
+}
