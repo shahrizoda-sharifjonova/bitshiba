@@ -1,0 +1,137 @@
+.faq{
+    padding-bottom: 135px;
+    &__title{
+        text-align: center;
+        @include media(576){
+            margin-bottom: 20px;
+        }
+    }
+    &__desc{
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 200%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 50px;
+        @include media(576){
+            font-size: 14px;
+            line-height: 200%;
+            margin-bottom: 25px;
+        }
+    }
+    .accordion{
+        &:nth-of-type(1){
+            margin-bottom: 35px;
+            @include media(576){
+                margin-bottom: 20px;
+            }
+        }
+        &:nth-of-type(2){
+            margin-bottom: 35px;
+            @include media(576){
+                margin-bottom: 20px;
+            }
+        }
+        &__buttons{
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            width: 34px;
+            height: 34px;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 4px;
+                height: 34px;
+                background: #FF7F00;
+                transition: 200ms ease;
+                @include media(768){
+                    height: 25px;
+                    width: 3px;
+                }
+            }            
+            &::after{
+                position: absolute;
+                content: '';
+                width: 4px;
+                height: 34px;
+                background: #FF7F00;
+                transform: rotate(90deg);
+                transition: 200ms ease;
+                @include media(768){
+                    height: 25px;
+                    width: 3px;
+                }
+            }
+        }
+        &__button{
+            background: rgba(249, 211, 17, 0.1);
+            border: 1px solid rgba(255, 127, 0, 0.2);
+            backdrop-filter: blur(40px);
+            padding: 20px 30px;
+            position: relative;
+            cursor: pointer;
+            @include media(768){
+                padding: 10px;
+            }
+            &.active{
+                padding-bottom: 10px;
+                border-bottom: none;
+                &::before{
+                    transform: translateY(-50%) rotate(45deg);
+                }
+                &::after{
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+                .accordion__buttons{
+                    transform: rotate(45deg);
+                }
+            }
+            &.active ~ .accordion__content{
+                border-top: none;
+            }
+        }
+        &__content{
+            background: rgba(249, 211, 17, 0.1);
+            border: 1px solid rgba(255, 127, 0, 0.2);
+            backdrop-filter: blur(40px);
+            padding: 0 30px 20px 30px;
+            display: none;
+            @include media(768){
+                padding: 0 10px 10px 10px;
+            }
+        }
+        &__title{
+            color: #F9D311;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 200%;
+            @include media(992){
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 200%;
+            }
+            @include media(768){
+                font-size: 16px;
+                display: block;
+                max-width: 290px;
+                width: 100%;
+            }
+            @include media(576){
+                max-width: 185px;
+            }
+        }
+        &__p{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 200%;
+            color: #FFFFFF;
+            @include media(576){
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 200%;
+            }
+        }
+    }
+}

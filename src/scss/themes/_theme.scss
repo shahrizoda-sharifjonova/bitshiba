@@ -15,6 +15,9 @@ body{
     position: relative;
     min-width: 100%;
     width: 100%;
+    &.active{
+        overflow: hidden;
+    }
     &::before{
         content: '';
         position: absolute;

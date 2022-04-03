@@ -665,7 +665,7 @@
   line-height: 200%;
   text-align: center;
   color: #FFFFFF;
-  margin-bottom: 50px;
+  margin-bottom: 115px;
 }
 
 .map__content {
@@ -686,7 +686,15 @@
   row-gap: 100px;
 }
 
+.map__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 200%;
+  color: #F9D311;
+}
+
 .map__item {
+  position: relative;
   width: 300px;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -696,6 +704,173 @@
   border: 1px solid rgba(255, 127, 0, 0.2);
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
+}
+
+.map__item::before {
+  content: attr(data-number);
+  position: absolute;
+  font-weight: 600;
+  font-size: 144px;
+  line-height: 100%;
+  -webkit-text-stroke: 1px #FF7F00;
+  color: transparent;
+  top: -70px;
+  right: -110px;
+  z-index: -1;
+}
+
+.map__item-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  margin-bottom: 10px;
+}
+
+.map__item-li {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 200%;
+  color: #FFFFFF;
+  position: relative;
+  padding-left: 15px;
+}
+
+.map__item-li::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  border-radius: 50%;
+  top: 17px;
+  left: 0;
+}
+
+.faq {
+  padding-bottom: 135px;
+}
+
+.faq__title {
+  text-align: center;
+}
+
+.faq__desc {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 200%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+}
+
+.faq .accordion:nth-of-type(1) {
+  margin-bottom: 35px;
+}
+
+.faq .accordion:nth-of-type(2) {
+  margin-bottom: 35px;
+}
+
+.faq .accordion__buttons {
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  width: 34px;
+  height: 34px;
+}
+
+.faq .accordion__buttons::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 34px;
+  background: #FF7F00;
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.faq .accordion__buttons::after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 34px;
+  background: #FF7F00;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.faq .accordion__button {
+  background: rgba(249, 211, 17, 0.1);
+  border: 1px solid rgba(255, 127, 0, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  padding: 20px 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq .accordion__button.active {
+  padding-bottom: 10px;
+  border-bottom: none;
+}
+
+.faq .accordion__button.active::before {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+.faq .accordion__button.active::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+
+.faq .accordion__button.active .accordion__buttons {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.faq .accordion__button.active ~ .accordion__content {
+  border-top: none;
+}
+
+.faq .accordion__content {
+  background: rgba(249, 211, 17, 0.1);
+  border: 1px solid rgba(255, 127, 0, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  padding: 0 30px 20px 30px;
+  display: none;
+}
+
+.faq .accordion__title {
+  color: #F9D311;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 200%;
+}
+
+.faq .accordion__p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 200%;
+  color: #FFFFFF;
 }
 
 * {
@@ -719,6 +894,10 @@ body {
   position: relative;
   min-width: 100%;
   width: 100%;
+}
+
+body.active {
+  overflow: hidden;
 }
 
 .no-webp body::before {
@@ -906,6 +1085,12 @@ ul {
   .use__left img {
     width: 400px;
   }
+
+  .map__content {
+    -webkit-column-gap: 180px;
+       -moz-column-gap: 180px;
+            column-gap: 180px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -999,6 +1184,12 @@ ul {
     width: calc(50% - 15px);
     height: 140px;
   }
+
+  .faq .accordion__title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 200%;
+  }
 }
 
 @media (max-width: 776px) {
@@ -1038,6 +1229,31 @@ ul {
 
   .use__left img {
     width: 350px;
+  }
+
+  .faq .accordion__buttons::before {
+    height: 25px;
+    width: 3px;
+  }
+
+  .faq .accordion__buttons::after {
+    height: 25px;
+    width: 3px;
+  }
+
+  .faq .accordion__button {
+    padding: 10px;
+  }
+
+  .faq .accordion__content {
+    padding: 0 10px 10px 10px;
+  }
+
+  .faq .accordion__title {
+    font-size: 16px;
+    display: block;
+    max-width: 290px;
+    width: 100%;
   }
 }
 
@@ -1140,6 +1356,64 @@ ul {
   .audit__item {
     width: 100%;
     height: 92px;
+  }
+
+  .map__desc {
+    font-size: 14px;
+    margin-bottom: 75px;
+  }
+
+  .map__subtitle {
+    font-size: 18px;
+  }
+
+  .map__item {
+    width: 227px;
+    padding: 10px;
+  }
+
+  .map__item::before {
+    font-size: 96px;
+    right: -40px;
+    top: -50px;
+  }
+
+  .map__item-top {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+
+  .map__item-li {
+    font-size: 14px;
+  }
+
+  .faq__title {
+    margin-bottom: 20px;
+  }
+
+  .faq__desc {
+    font-size: 14px;
+    line-height: 200%;
+    margin-bottom: 25px;
+  }
+
+  .faq .accordion:nth-of-type(1) {
+    margin-bottom: 20px;
+  }
+
+  .faq .accordion:nth-of-type(2) {
+    margin-bottom: 20px;
+  }
+
+  .faq .accordion__title {
+    max-width: 185px;
+  }
+
+  .faq .accordion__p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 200%;
   }
 }
 

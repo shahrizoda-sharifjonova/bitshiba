@@ -8,7 +8,11 @@
         line-height: 200%;
         text-align: center;
         color: #FFFFFF;
-        margin-bottom: 50px;
+        margin-bottom: 115px;
+        @include media(576){
+            font-size: 14px;
+            margin-bottom: 75px;
+        }
     }
     &__content{
         display: flex;
@@ -17,13 +21,77 @@
         flex-wrap: wrap;
         column-gap: 250px;
         row-gap: 100px;
+        @include media(1200){
+            column-gap: 180px;
+        }
+    }
+    &__subtitle{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 200%;
+        color: #F9D311;
+        @include media(576){
+            font-size: 18px;
+        }
     }
     &__item{
+        position: relative;
         width: 300px;
         height: max-content;
         padding: 20px 20px 20px 30px;
         background: rgba(249, 211, 17, 0.1);
         border: 1px solid rgba(255, 127, 0, 0.2);
         backdrop-filter: blur(40px);
+        @include media(576){
+            width: 227px;
+            padding: 10px;
+        }
+        &::before{
+            content: attr(data-number);
+            position: absolute;
+            font-weight: 600;
+            font-size: 144px;
+            line-height: 100%;
+            -webkit-text-stroke: 1px #FF7F00;
+            color: transparent;
+            top: -70px;
+            right: -110px;
+            z-index: -1;
+            @include media(576){
+                font-size: 96px;
+                right: -40px;
+                top: -50px;
+            }
+        }
+        &-top{
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+            margin-bottom: 10px;
+            @include media(576){
+                column-gap: 10px;
+            }
+        }
+        &-li{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 200%;
+            color: #FFFFFF;
+            position: relative;
+            padding-left: 15px;
+            @include media(576){
+                font-size: 14px;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 3px;
+                height: 3px;
+                background: #fff;
+                border-radius: 50%;
+                top: 17px;
+                left: 0;
+            }            
+        }
     }
 }
