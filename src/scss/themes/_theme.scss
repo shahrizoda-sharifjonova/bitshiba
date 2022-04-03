@@ -5,6 +5,7 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     font-family: Oswald, sans-serif;
+    scroll-behavior: smooth;
     &:focus,
     &:active{
         outline: none;
@@ -31,6 +32,13 @@ body{
         bottom: 0;
         right: 0;
         z-index: -1;
+    }
+    &::-webkit-scrollbar{
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #F9D311;
+        border-radius: 8px;
     }
 }
 .wrapper{

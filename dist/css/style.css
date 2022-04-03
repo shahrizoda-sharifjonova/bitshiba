@@ -342,6 +342,59 @@
   margin-top: -3px;
 }
 
+.footer {
+  padding-bottom: 50px;
+}
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 35px;
+  position: relative;
+}
+
+.footer__up {
+  -webkit-filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.7));
+          filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.7));
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__up.disable-md {
+  position: absolute;
+  right: -80px;
+  bottom: 0px;
+}
+
+.footer__p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  color: #F9D311;
+}
+
 .intro__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -753,7 +806,7 @@
 }
 
 .faq {
-  padding-bottom: 135px;
+  padding-bottom: 135px !important;
 }
 
 .faq__title {
@@ -880,6 +933,7 @@
           box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   font-family: Oswald, sans-serif;
+  scroll-behavior: smooth;
 }
 
 *:focus,
@@ -915,6 +969,15 @@ body::before {
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #F9D311;
+  border-radius: 8px;
 }
 
 .wrapper {
@@ -988,6 +1051,12 @@ ul {
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .footer__up.disable-md {
+    right: 0;
   }
 }
 
@@ -1210,6 +1279,12 @@ ul {
     display: none !important;
   }
 
+  .footer__up.enable-md {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
   .check__img {
     width: 200px;
   }
@@ -1229,6 +1304,10 @@ ul {
 
   .use__left img {
     width: 350px;
+  }
+
+  .faq {
+    padding-bottom: 100px !important;
   }
 
   .faq .accordion__buttons::before {
@@ -1284,6 +1363,20 @@ ul {
 
   .disable-sm {
     display: none !important;
+  }
+
+  .footer__up {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer__up img {
+    height: 18px;
+  }
+
+  .footer__p {
+    font-size: 18px;
+    line-height: 150%;
   }
 
   .check__content {
